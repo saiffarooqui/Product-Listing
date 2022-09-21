@@ -1,22 +1,14 @@
 {
-  "name": "product-listing",
+  "name": "productlisting",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saiffarooqui/Product-Listing.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/saiffarooqui/Product-Listing/issues"
-  },
-  "homepage": "https://github.com/saiffarooqui/Product-Listing#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.31.0",

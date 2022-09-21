@@ -13,12 +13,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .App{
-  max-width: 1200px;
+  background-color: #FFF5E4;
   width: 100%;
   min-height: 100vh;
   box-shadow: 0 0 20px #eee;
   margin: 0 auto;
   overflow: hidden;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
+ul{
+  list-style: none;
+}
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ----------------- Header ------------------- */
+@import url("./components/header/header.css");
+
+/* ----------------- Auth ------------------- */
+@import url("./components/body/auth/auth.css");
+
+/* ----------------- Profile ------------------- */
+@import url("./components/body/profile/profile.css");
+
+/* ----------------- Dashboard ------------------ */
+@import url("./components/body/dashboard/dashboard.css");
+
+/* ----------------- Home ------------------ */
+@import url("./components/body/home/home.css");

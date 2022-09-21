@@ -13,13 +13,13 @@ const uploadCtrl = {
             const file = req.files.file;
             
             cloudinary.v2.uploader.upload(file.tempFilePath, {
-                folder: 'avatar', width: 150, height: 150, crop: "fill"
+                folder: 'avatar', width: 480, height: 320, crop: "fill"
             }, async(err, result) => {
                 if(err) throw err;
 
                 removeTmp(file.tempFilePath)
-                console.log({result})
-                //res.json({url: result.secure_url})
+                // console.log({result})
+                res.json({url: result.secure_url})
             })
         
         } catch (err) {
