@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import {fetchAllProducts, dispatchGetAllProducts} from '../../../redux/actions/productsAction'
 
+import dashImage from '../../assets/dashboard.png'
+
 
 function Dashboard() {
     const auth = useSelector(state => state.auth)
@@ -22,23 +24,28 @@ function Dashboard() {
 
     return (
         <>
-            <section className="cta-primary">
-                <div className="cta-container">
-                    <div className="cta-details">
-                        <h3>
-                            Start Listing your Products for <span>higher reach</span>
-                        </h3>
-                        <p>
-                            Get noticed by customers worldwide.
+            <section>
+                <div className="cta-primary">
+                    <div className="cta-container">
+                        <div className="cta-details">
+                            <h3>
+                                Start Listing your Products for <span>higher reach</span>
+                            </h3>
+                            <p>
+                                Get noticed by customers worldwide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in erat fermentum ante dignissim efficitur in sit amet urna. Praesent pretium erat sem, quis hendrerit mi mattis nec.
+                            </p>
+                        </div>
+                        <p className="cta-btn">
+                            <p><Link to="/create_product">List Product</Link></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
                         </p>
                     </div>
-                    <p className="cta-btn">
-                        <p><Link to="/create_product">List Product</Link></p>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                    </p>
-                </div>
+                    <div className="cta-image">
+                        <img src={dashImage} alt="" />
+                    </div>
+                </div>            
             </section>
             {/* <section>
                 <form
