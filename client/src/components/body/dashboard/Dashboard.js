@@ -47,7 +47,16 @@ function Dashboard() {
                     </div>
                 </div>            
             </section>
-            {/* <section>
+
+            <section className="cards-primary">
+                <div className="cards-header">
+                    <h1>
+                        Products
+                    </h1>
+                    <p>
+                        Products listed by users all over the world.
+                    </p>
+                </div>
                 <form
                 onSubmit={(e) => e.preventDefault()} 
                 className="search-form-primary">
@@ -62,17 +71,6 @@ function Dashboard() {
                         />
                     </div>
                 </form>
-            </section> */}
-
-            <section className="cards-primary">
-                <div className="cards-header">
-                    <h1>
-                        Products
-                    </h1>
-                    <p>
-                        Products listed by users all over the world.
-                    </p>
-                </div>
                 <div className="card-container">
                     {
                         products.map((items, key) => (
