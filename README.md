@@ -2,7 +2,7 @@
 ### Tech stack: MERN + Redux
 
 ## Install dependencies for server 
-### `npm install`
+### cd api ---> `npm install`
 
 ## Install dependencies for client
 ### cd client ---> `npm install`
@@ -10,13 +10,16 @@
 ## .env is as follows:
 MONGODB_URL = 
 
+
 ACTIVATION_TOKEN_SECRET = 
 
 ACCESS_TOKEN_SECRET = 
 
 REFRESH_TOKEN_SECRET = 
 
+
 CLIENT_URL = http://localhost:3000
+
 
 MAILING_SERVICE_CLIENT_ID = 
 
