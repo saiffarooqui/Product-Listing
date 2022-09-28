@@ -109,7 +109,7 @@ function CreateProduct() {
         </div>
 
         <div className="create_product">
-           <h3>Create Product</h3>
+           <h2>Create Product</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="title">Title</label>
@@ -141,7 +141,7 @@ function CreateProduct() {
                     <input type="text" name="phone" id="phone"placeholder="Enter Phone Number" value={phone} onChange={handleChangeInput} required/>
                 </div>
 
-                <div className="row">
+                <div className="row file">
                 <input type="file" name="file" id="file_upload" onChange={changeAvatar} />
                 </div>
 
