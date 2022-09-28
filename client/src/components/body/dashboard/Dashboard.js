@@ -1,4 +1,4 @@
-import React, {useEffect}from 'react'
+import React, {useEffect, useState}from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import {fetchAllProducts, dispatchGetAllProducts} from '../../../redux/actions/productsAction'
@@ -11,6 +11,8 @@ function Dashboard() {
     const token = useSelector(state => state.token)
 
     const products = useSelector(state => state.products)
+
+    const [searchTerm, setSearchTerm] = useState("")
 
     const {isLogged} = auth
     const dispatch = useDispatch()
@@ -68,12 +70,21 @@ function Dashboard() {
                             type="text"
                             placeholder="Search"
                             className="search-input"
+                            onChange={(event) => {
+                                setSearchTerm(event.target.value)
+                            }}
                         />
                     </div>
                 </form>
                 <div className="card-container">
                     {
-                        products.map((items, key) => (
+                        products.filter((items) => {
+                            if(searchTerm === ""){
+                                return items
+                            } else if(items.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                                return items
+                            }
+                        }).map((items, key) => (
                             !items.isArchived ?
                             <article className="card" key={key}>
                                 <p className="card-details">
