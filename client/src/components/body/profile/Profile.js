@@ -113,7 +113,7 @@ function Profile() {
     const handleDelete = async (id) => {
         try {
             if(user._id !== id){
-                if(window.confirm("Are you sure you want to delete this account?")){
+                if(window.confirm("Are you sure you want to delete this product permanently?")){
                     setLoading(true)
                     await axios.delete(`/api/product/${id}`, {
                         headers: {Authorization: token}
@@ -176,9 +176,9 @@ function Profile() {
             </div>
 
             <div className="col-right">
-                <h2>My Products</h2>
+                {/* <h2>My Products</h2> */}
 
-                <div style={{overflowX: "auto"}}>
+                {/* <div style={{overflowX: "auto"}}>
                     <table className="customers">
                         <thead>
                             <tr>
@@ -204,17 +204,76 @@ function Profile() {
                                             </td>
                                             <td>
                                                 <Link to={`/edit_product/${product._id}`}>
-                                                    <i className="fas fa-edit" title="Edit"></i>
+                                                    <i className="fas fa-edit" title="Edit"> Edit</i>
                                                 </Link>
                                                 <i className="fas fa-trash-alt" title="Remove"
-                                                onClick={() => handleDelete(product._id)} ></i>
+                                                onClick={() => handleDelete(product._id)} > Delete</i>
                                             </td>
                                         </tr>  : null        
                             ))
                             }
                         </tbody>
                     </table>
+                </div> */}
+
+                <div className="cards-primary">
+                    <div className="cards-header">
+                        <h2>
+                            MY PRODUCTS
+                        </h2>
+                        {/* <p>
+                            
+                        </p> */}
+                    </div>
+
+                    <div className="card-container">
+                    {
+                        products.map((items, key) => (
+                            items.user === user._id ?
+                            <article className="card" key={key}>
+                                <div className="card-details">
+                                    <Link to={`/view_product/${items._id}`}>
+                                        <img src={items.image} loading="lazy" alt={items.title}  className="w-full h-48 rounded-tl-md rounded-tr-md" />
+                                        <div className="card-header">
+                                            {/* <div className="avatar">
+                                                <img src={items.authorLogo} alt={items.authorName} />
+                                            </div> */}
+                                            <div className="info">
+                                                <span className="cost">₹ {items.price}</span>
+                                                <span className="date">{items.updatedAt.split('').slice(0, 10).join('')}</span>
+                                            </div>
+                                        </div>
+                                        <div className="card-footer">
+                                            <h3>
+                                                {items.title}
+                                            </h3>
+                                            <p>{items.description}</p>
+                                        </div>
+                                    </Link> 
+                                    <div className="card-archive">
+                                        <p>
+                                            ARCHIVED :&nbsp;&nbsp;
+                                            {
+                                                items.isArchived === 1
+                                                ? <i className="fas fa-check" title="isArchived"></i>
+                                                : <i className="fas fa-times" title="isNotArchived"></i>
+                                            }
+                                        </p>
+                                    </div>
+                                    <div className="card-actions">
+                                        <Link to={`/edit_product/${items._id}`}>
+                                            <i className="fas fa-edit" title="Edit"> Edit</i>
+                                        </Link>
+                                            <i className="fas fa-trash-alt" title="Remove"
+                                            onClick={() => handleDelete(items._id)} > Delete</i>
+                                    </div>
+                                </div>
+                            </article> : null
+                        ))
+                    }
+                    </div>
                 </div>
+
             </div>
         </div>
         </>

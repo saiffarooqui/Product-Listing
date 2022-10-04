@@ -126,9 +126,10 @@
     color: #6b7280;
   }
   .cards-primary .card-container {
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: grid;
     gap: 0.5rem;
+    padding-bottom: 50px;
   }
   @media (min-width: 640px) {
     .cards-primary .card-container {
@@ -159,9 +160,7 @@
     border-top-right-radius: 0.375rem;
   }
   .cards-primary .card-container .card .card-details .card-header {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0.5rem 0px 1rem;
+    margin: 0.5rem 0.5rem 0px 0.5rem;
     padding-top: 0.75rem;
   }
   .cards-primary .card-container .card .card-details .card-header .avatar {
@@ -176,11 +175,14 @@
     border-radius: 50%;
   }
   .cards-primary .card-container .card .card-details .card-header .info {
-    margin-left: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0.5rem;
   }
   .cards-primary .card-container .card .card-details .card-header .info .cost {
     display: block;
-    color: #111827;
+    color: #850E35;
     font-weight: bold;
   }
   .cards-primary .card-container .card .card-details .card-header .info .date {
@@ -191,7 +193,7 @@
   }
   .cards-primary .card-container .card .card-details .card-footer {
     padding-top: 0.75rem;
-    margin: 0px 0.5rem 0.75rem 1rem;
+    margin: 0px 0.5rem 0.75rem 0.5rem;
   }
   .cards-primary .card-container .card .card-details .card-footer h3 {
     font-size: 1.25rem;
@@ -209,6 +211,33 @@
     text-overflow: ellipsis;
   }
 
+  .cards-primary .card-container .card .card-details .card-archive {
+    margin: 0px 0.5rem 0.5rem 0.5rem;
+    font-weight: bold;
+  }
+
+  .cards-primary .card-container .card .card-details .card-archive p {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #850E35;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cards-primary .card-container .card .card-details .card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .cards-primary .card-container .card .card-details .card-actions i {
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
 
   /* Create Product */
 
