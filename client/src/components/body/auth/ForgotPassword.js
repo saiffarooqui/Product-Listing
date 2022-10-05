@@ -33,17 +33,20 @@ function ForgotPassword() {
     }
     
     return (
-        <div className="fg_pass">
+        <div className="login_page">
             <h2>Forgot Your Password?</h2>
 
-            <div className="row">
+            <div className="">
                 {err && showErrMsg(err)}
                 {success && showSuccessMsg(success)}
-
+                <div>
                 <label htmlFor="email">Enter your email address</label>
-                <input type="email" name="email" id="email" value={email}
+                <input type="email" name="email" id="email" placeholder="Enter your email" value={email}
                 onChange={handleChangeInput} />
-                <button onClick={forgotPassword}>Verify your email</button>
+                </div>
+                <div className="row fg-pass-button">
+                    <button onClick={forgotPassword}>Verify your email</button>
+                </div>
             </div>
         </div>
     )

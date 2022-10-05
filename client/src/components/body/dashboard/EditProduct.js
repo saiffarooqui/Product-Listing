@@ -138,7 +138,7 @@ function EditProduct() {
             </div>
 
             <div className="create_product">
-                <h3>Edit Product</h3>
+                <h2>Edit Product</h2>
 
                 <div className="avatar">
                     <img src={avatar ? avatar : editProduct.image} alt=""/>
@@ -181,7 +181,7 @@ function EditProduct() {
 
                 <div className="check">
                     <input type="checkbox" id="isArchived" checked={isArchived} onChange={handleCheck} />
-                    <label htmlFor="isArchived">isArchived</label>
+                    <label htmlFor="isArchived">Archive</label>
                 </div>
 
                 <div className="row">

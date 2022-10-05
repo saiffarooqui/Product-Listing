@@ -10,9 +10,9 @@ function ViewProduct() {
     <section className="cta-secondary">
             <div className="cta-cover"></div>
             {
-                    products.map(product => (
+                    products.map((product,key) => (
                         product._id === id ?
-                        <div className="cta-container">
+                        <div className="cta-container" key={key}>
                         <div className="cta-details">
                             <h3> {product.title} </h3>
                             <div className="first">

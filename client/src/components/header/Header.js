@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import axios from 'axios'
+import favicon from '../assets/favicon.png'
 
 
 function Header() {
@@ -39,7 +40,10 @@ function Header() {
     return (
         <header>
             <div className="logo">
-                <h1><Link to="/">Product Listing</Link></h1>
+                <img src={favicon} alt="logo" />
+                <Link to="/">
+                    <h1>Product Listing</h1>
+                </Link>
             </div>
 
             <ul style={transForm}>

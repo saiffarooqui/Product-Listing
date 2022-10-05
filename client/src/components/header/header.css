@@ -8,6 +8,17 @@ header{
     flex-wrap: wrap;
     padding: 0 30px;
 }
+header .logo {
+    display: flex;
+    font-size: 13px;
+}
+header .logo h1{
+    margin-left: 10px;
+}
+header .logo img{
+    max-width: 35px;
+    max-height: 35px;
+}
 header a{
     color: white;
     text-transform: uppercase;

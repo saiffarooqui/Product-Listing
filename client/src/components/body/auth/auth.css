@@ -1,8 +1,15 @@
 .login_page{
     max-width: 500px;
-    margin: auto;
+    margin: 50px auto 0 auto;
     color: #850E35;
-    padding: 0 15px;
+    padding: 10px 15px;
+
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .login_page h2{
     text-transform: uppercase;
@@ -33,10 +40,20 @@
     padding: 10px 0;
     color: white;
     background: #850E35;
+    border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-right: 10px;
 }
+.login_page .fg-pass-button{
+    margin: 5px 0;
+}
+
+.login_page .fg-pass-button button{
+    width: 200px;
+}
+
+
 .login_page p{
     margin: 10px 0;
 }
@@ -46,7 +63,7 @@
 }
 
 /* ------------- Forgot Password --------------- */
-.fg_pass h2{
+/* .fg_pass h2{
     color: #850E35;
     text-transform: uppercase;
     text-align: center;
@@ -76,4 +93,4 @@
     letter-spacing: 1.3px;
     border-radius: 3px;
     margin-top: 15px;
-}
+} */
