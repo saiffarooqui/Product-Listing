@@ -15,6 +15,11 @@
       padding-right: 2rem;
     }
   }
+  @media (max-width: 1000px) {
+    .cta-primary .cta-image img{
+      display: none;
+    }
+  }
   .cta-primary .cta-container {
     max-width: 36rem;
   }

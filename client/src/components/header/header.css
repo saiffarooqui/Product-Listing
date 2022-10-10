@@ -65,3 +65,8 @@ header ul li img{
     display: block;
 } 
 
+@media (max-width: 640px) {
+    .logo h1{
+        display: none;
+    }
+  }

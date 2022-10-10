@@ -20,6 +20,9 @@ app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/upload'))
 app.use('/api', require('./routes/productRouter'))
 
+app.get('/', (req, res) => {
+    res.send("APP IS RUNNING.")
+})
 
 // Connect to mongodb
 const URI = process.env.MONGODB_URL

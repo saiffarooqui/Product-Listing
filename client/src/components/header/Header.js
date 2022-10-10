@@ -40,7 +40,9 @@ function Header() {
     return (
         <header>
             <div className="logo">
-                <img src={favicon} alt="logo" />
+                <Link to="/">
+                    <img src={favicon} alt="logo" />
+                </Link>
                 <Link to="/">
                     <h1>Product Listing</h1>
                 </Link>
