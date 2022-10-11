@@ -2,6 +2,10 @@ import React from 'react'
 import FaqsCard from './FaqsCard'
 
 function Home() {
+
+    const currentYear = (new Date().getFullYear())
+    const yearTxt = currentYear === 2022 ? "2022" : "2022 - "+currentYear
+
     return (
         <>
             <div className="hero-dark-container">
@@ -26,6 +30,9 @@ function Home() {
                 </section>
             </div>
             <FaqsCard />
+            <footer>
+                © { yearTxt } Product Listing
+            </footer>
         </>
     )
 }
